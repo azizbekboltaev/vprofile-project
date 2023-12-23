@@ -114,6 +114,7 @@ pipeline {
                 }
             }
         }
+    }    
     post {
         always {
             echo 'slack notification'
@@ -122,4 +123,4 @@ pipeline {
                 message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${BUILD_NUMBER} \n More info you can find at: ${env.BUILD_URL}"
         }
     }
-}
+}    
